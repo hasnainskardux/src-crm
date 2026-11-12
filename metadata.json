@@ -1,0 +1,6 @@
+{
+  "name": "SRC Real Estate CRM",
+  "description": "Premium Real Estate CRM Dashboard for SRC in Skardu, Gilgit-Baltistan, Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

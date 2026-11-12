@@ -66,11 +66,7 @@ export const TopNavbar: React.FC = () => {
   }, [setIsGlobalSearchOpen]);
 
   return (
-    <header
-      className={`fixed top-0 right-0 z-20 h-16 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-6 flex items-center justify-between transition-all duration-300 ${
-        sidebarCollapsed ? 'left-20' : 'left-64'
-      }`}
-    >
+    <header className="sticky top-0 z-20 h-16 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-6 sm:px-8 flex items-center justify-between transition-all duration-300">
       {/* Global Search Input */}
       <div className="flex-1 max-w-xl">
         <button

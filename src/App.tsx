@@ -70,23 +70,20 @@ const MainLayout: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-[#263238] flex flex-col">
-      {/* Fixed Sidebar */}
+    <div className="min-h-screen bg-[#F8FAFC] text-[#263238] flex">
+      {/* Sticky Sidebar taking true layout space */}
       <Sidebar />
 
-      {/* Fixed Top Navbar */}
-      <TopNavbar />
+      {/* Main Content Area (Navbar + Active Dashboard View) */}
+      <div className="flex-1 min-w-0 flex flex-col min-h-screen">
+        <TopNavbar />
 
-      {/* Main Viewport Content */}
-      <main
-        className={`flex-1 pt-20 px-6 sm:px-8 transition-all duration-300 ${
-          sidebarCollapsed ? 'pl-26' : 'pl-72'
-        }`}
-      >
-        <div className="max-w-7xl mx-auto">
-          {renderActiveView()}
-        </div>
-      </main>
+        <main className="flex-1 p-6 sm:p-8">
+          <div className="max-w-7xl mx-auto w-full">
+            {renderActiveView()}
+          </div>
+        </main>
+      </div>
 
       {/* Modals & Interactive Overlays */}
       <GlobalSearchModal />
